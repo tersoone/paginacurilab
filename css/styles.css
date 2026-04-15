@@ -65,6 +65,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -1147,6 +1148,30 @@ img {
         z-index: 1001;
     }
 
+    .logo {
+        max-width: calc(100% - 60px);
+    }
+
+    .logo img {
+        height: auto;
+        max-height: 50px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .header.scrolled .logo img {
+        height: auto;
+        max-height: 40px;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
     .hero-title {
         font-size: clamp(2rem, 6vw, 3rem);
     }
@@ -1207,7 +1232,19 @@ img {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .logo img {
+        max-height: 40px;
+    }
+
+    .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
     }
 
     .service-category {
